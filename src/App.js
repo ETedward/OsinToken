@@ -18,14 +18,14 @@ function App() {
 		</Router>
 			<div id="page-wrapper">
 	  	
-					<header id="header" className="alt">
+					{/* <header id="header" className="alt">
 						<h1><a href="index.html">Bellingcoin</a></h1>
 						<nav>
 							<a href="#menu">Menu</a>
 						</nav>
-					</header>
+					</header> */}
 
-					<nav id="menu">
+					{/* <nav id="menu">
 						<div className="inner">
 							<h2>Menu</h2>
 							<p id='userWallet' className='text-lg text-gray-600 my-2'>testing</p>
@@ -38,7 +38,7 @@ function App() {
 							</ul>
 							<a href="#" className="close">Close</a>
 						</div>
-					</nav>
+					</nav> */}
 
 				{/* <!-- Banner --> */}
 					<section id="banner">
