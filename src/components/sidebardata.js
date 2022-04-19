@@ -1,5 +1,5 @@
 import React from 'react'
-import * as FaIcons from "react-icons/fa"
+// import * as FaIcons from "react-icons/fa"
 import * as AiIcons from "react-icons/ai"
 import * as IoIcons from 'react-icons/io';
 
@@ -13,7 +13,7 @@ export const SidebarData = [
     },
     {
         title: 'News and Rewards',
-        path: '/news',
+        path: '/awards',
         icon: <IoIcons.IoIosPaper/>,
         cName: 'nav-text'
     },
