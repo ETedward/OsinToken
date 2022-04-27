@@ -3,6 +3,7 @@ import React from 'react';
 
 function awards() {
   return (
+    
     <div className = 'awards'>
         <h1> AWARDS </h1>
     </div>
