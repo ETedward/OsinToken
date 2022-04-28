@@ -36,10 +36,9 @@ export const init = async () => {
     
     const bellingContract = new web3.eth.Contract(
         bellingContractBuild.abi, 
-        bellingContractBuild.networks[networkId].address
+        bellingContractBuild.networks[5777].address
     );
 };
-
 
 export const setStartTime = async () => {
     if (!isInitialized) {
@@ -48,5 +47,4 @@ export const setStartTime = async () => {
 
     return bellingContract.methods
         .setStartTime(1000)
-        .call()
 };
