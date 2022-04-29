@@ -42,11 +42,11 @@ function Home() {
 						{/* <!-- One --> */}
 							<section id="one" className="wrapper spotlight style1">
 								<div className="inner">
-									<a href="#" className="image"><img src="images/pic01.jpg" alt="" /></a>
+									<a href="/#" className="image"><img src="images/pic01.jpg" alt="" /></a>
 									<div className="content">
 										<h2 className="major">What is Bellingcoin?</h2>
 										<p> We're like the Pulitzers for open source investigations — except awards are decided and voted by the community. In technical jargon, Bellingcoin is an Ethereum token written to ERC-20 standards, with voting implemented like a DAO. In practical terms, you vote for your favorite investigation of the week; if the piece wins, the author gets an NFT, and you get to win one. </p>
-										<a href="#" className="special">Learn more</a>
+										<a href="/#" className="special">Learn more</a>
 									</div>
 								</div>
 							</section>
@@ -54,11 +54,11 @@ function Home() {
 						{/* <!-- Two --> */}
 							<section id="two" className="wrapper alt spotlight style2">
 								<div className="inner">
-									<a href="#" className="image"><img src="images/pic02.jpg" alt="" /></a>
+									<a href="/#" className="image"><img src="images/pic02.jpg" alt="" /></a>
 									<div className="content">
 										<h2 className="major">Expert Curated Decisions</h2>
 										<p>Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras turpis ante, nullam sit amet turpis non, sollicitudin posuere urna. Mauris id tellus arcu. Nunc vehicula id nulla dignissim dapibus. Nullam ultrices, neque et faucibus viverra, ex nulla cursus.</p>
-										<a href="#" className="special">Learn more</a>
+										<a href="/#" className="special">Learn more</a>
 									</div>
 								</div>
 							</section>
@@ -66,11 +66,11 @@ function Home() {
 						{/* <!-- Three --> */}
 							<section id="three" className="wrapper spotlight style3">
 								<div className="inner">
-									<a href="#" className="image"><img src="images/pic03.jpg" alt="" /></a>
+									<a href="/www.twitter.com" className="image"><img src="images/pic03.jpg" alt="" /></a>
 									<div className="content">
 										<h2 className="major">Exclusive NFT Rewards</h2>
 										<p>Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras turpis ante, nullam sit amet turpis non, sollicitudin posuere urna. Mauris id tellus arcu. Nunc vehicula id nulla dignissim dapibus. Nullam ultrices, neque et faucibus viverra, ex nulla cursus.</p>
-										<a href="#" className="special">Learn more</a>
+										<a href="/www.twitter.com" className="special">Learn more</a>
 									</div>
 								</div>
 							</section>
@@ -82,32 +82,32 @@ function Home() {
 									<p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.</p>
 									<section className="features">
 										<article>
-											<a href="#" className="image"><img src="images/pic04.jpg" alt="" /></a>
+											<a href="/#" className="image"><img src="images/pic04.jpg" alt="" /></a>
 											<h3 className="major">Sed feugiat lorem</h3>
 											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-											<a href="#" className="special">Learn more</a>
+											<a href="/#" className="special">Learn more</a>
 										</article>
 										<article>
-											<a href="#" className="image"><img src="images/pic05.jpg" alt="" /></a>
+											<a href="/#" className="image"><img src="images/pic05.jpg" alt="" /></a>
 											<h3 className="major">Nisl placerat</h3>
 											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-											<a href="#" className="special">Learn more</a>
+											<a href="/#" className="special">Learn more</a>
 										</article>
 										<article>
-											<a href="#" className="image"><img src="images/pic06.jpg" alt="" /></a>
+											<a href="/#" className="image"><img src="images/pic06.jpg" alt="" /></a>
 											<h3 className="major">Ante fermentum</h3>
 											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-											<a href="#" className="special">Learn more</a>
+											<a href="/#" className="special">Learn more</a>
 										</article>
 										<article>
-											<a href="#" className="image"><img src="images/pic07.jpg" alt="" /></a>
+											<a href="/#" className="image"><img src="images/pic07.jpg" alt="" /></a>
 											<h3 className="major">Fusce consequat</h3>
 											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-											<a href="#" className="special">Learn more</a>
+											<a href="/#" className="special">Learn more</a>
 										</article>
 									</section>
 									<ul className="actions">
-										<li><a href="#" className="button">Browse All</a></li>
+										<li><a href="/#" className="button">Browse All</a></li>
 									</ul>
 								</div>
 							</section>
@@ -141,8 +141,8 @@ function Home() {
 							</form>
 							<ul className="contact">
 								
-								<li className="icon brands fa-twitter"><a href="#">twitter.com/bellingcoin</a></li>
-								<li className="icon brands fa-discord"><a href="#">discord.com/bellingcoin</a></li>
+								<li className="icon brands fa-twitter"><a href="/#">twitter.com/bellingcoin</a></li>
+								<li className="icon brands fa-discord"><a href="/#">discord.com/bellingcoin</a></li>
 								<li className="icon solid fa-home">
 									Developed in Princeton University<br />
 									@ 312 Brown Hall<br />
