@@ -1,6 +1,6 @@
-const Token = artifacts.require("Token");
+const Voting = artifacts.require('OSIVoting');
 
-module.exports = function (deployer) {
+module.exports = async function (deployer) {
   const start_time = 1651099591;
-  deployer.deploy(Token, 100, start_time);
+  await deployer.deploy(Voting, 100, start_time);
 };

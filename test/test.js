@@ -1,4 +1,6 @@
-const Token = artifacts.require('Token');
+const Voting = artifacts.require('OSIVoting');
+const GovToken = artifacts.require('GovToken');
+const RewToken = artifacts.require('RewToken');
 // const timeMachine = require('ganache-time-traveler');
 
 const SECONDS_PER_DAY = 86400;
@@ -20,23 +22,28 @@ async function shouldCauseRevert(fun) {
 contract("Test contract", function(accounts) {
 
   let contract;
+  let goverance;
+  let rewards;
   const me = accounts[0];
   const you = accounts[1];
+  const you2 = accounts[2];
 
   before('deploy token', async function() {
-    contract = await Token.deployed();
+    contract = await Voting.deployed();
+    goverance = await GovToken.at(await contract.goverance());
+    rewards = await RewToken.at(await contract.rewards());
   });
 
   it("should give me all of the goverance tokens at the start", async function() {
-    let supply = await contract.goveranceSupply();
-    let myBalance = await contract.goveranceBalance(me);
+    let supply = await goverance.totalSupply();
+    let myBalance = await goverance.balanceOf(me);
     assert.equal(supply.toNumber(), myBalance.toNumber());
   });
 
   it("should allow transfering goverance tokens", async function() {;
     const transferAmount = 1;
-    let transfer = await contract.transferGoverance(you, transferAmount);
-    let yourBalance = await contract.goveranceBalance(you);
+    let transfer = await goverance.transfer(you, transferAmount);
+    let yourBalance = await goverance.balanceOf(you);
     assert.equal(transferAmount, yourBalance.toNumber());
   });
 
@@ -72,23 +79,24 @@ contract("Test contract", function(accounts) {
   });
 
   it("should allow voting after 2 days", async function() {
-    const voteAmount = 1;
+    const voteAmount = 50;
     let voted = await contract.castVotes(0, voteAmount, {from: you});
     let votes = await contract.voteCounts(0);
     assert.equal(votes.toNumber(), voteAmount);
   });
 
   it("should disallow voting more that your tokens", async function() {
-    const voteAmount = 1;
+    const voteAmount = 100;
     await shouldCauseRevert(async () => {
       let voted = await contract.castVotes(0, voteAmount, {from: you});
     });
   });
 
-  it("should prevent transfering tokens when you have already voted", async function() {
+  it("should prevent double voting", async function() {
     const transferAmount = 1;
+    await goverance.transfer(you2, transferAmount, {from: you});
     await shouldCauseRevert(async () => {
-      let transfer = await contract.transferGoverance(me, transferAmount, {from: you});
+      let voted = await contract.castVotes(0, 100, {from: you2});
     });
   });
 
@@ -100,9 +108,9 @@ contract("Test contract", function(accounts) {
   });
   
   it("should allow transfering reward tokens", async function () {
-    const transferAmount = 1;
-    let transfer = await contract.transferReward(you, transferAmount);
-    let yourBalance = await contract.rewardBalance(you);
+    const transferAmount = 100;
+    let transfer = await rewards.transfer(you, transferAmount);
+    let yourBalance = await rewards.balanceOf(you);
     return assert.equal(transferAmount, yourBalance.toNumber());
   });
 });

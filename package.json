@@ -3,12 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@openzeppelin/contracts": "^4.6.0",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.1.1",
     "@testing-library/user-event": "^13.5.0",
     "@truffle/hdwallet-provider": "^2.0.7",
     "ethers": "^5.6.4",
-    "ganache": "^7.0.5",
+    "ganache": "^7.1.0",
     "ganache-time-traveler": "^1.0.16",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
@@ -24,7 +25,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "ganache": "ganache --wallet.seed myCustomSeed"
   },
   "eslintConfig": {
     "extends": [
