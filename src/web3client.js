@@ -32,9 +32,10 @@ export const init = async () => {
     
     // part 2 connection the contract
     const networkId = await web3.eth.net.getId();
+    const accounts = await web3.eth.getAccounts()
     isInitialized = true;
     
-    const bellingContract = new web3.eth.Contract(
+    bellingContract = new web3.eth.Contract(
         bellingContractBuild.abi, 
         bellingContractBuild.networks[5777].address
     );
@@ -44,7 +45,7 @@ export const setStartTime = async () => {
     if (!isInitialized) {
         await init();
     }
-
+    // return bellingContract.methods.governenceSupply()
     return bellingContract.methods
-        .setStartTime(1000)
+        .winnersLength()
 };

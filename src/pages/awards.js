@@ -7,7 +7,8 @@ function Awards() {
 
   const start = () => {
     console.log("button clicked");
-    setStartTime();
+    console.log(setStartTime());
+    
   }
 
   return (
