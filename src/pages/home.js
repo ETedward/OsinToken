@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 // import '../css/main.css';
 
 function Home() {
@@ -46,7 +48,7 @@ function Home() {
 									<div className="content">
 										<h2 className="major">What is Bellingcoin?</h2>
 										<p> We're like the Pulitzers for open source investigations — except awards are decided and voted by the community. In technical jargon, Bellingcoin is an Ethereum token written to ERC-20 standards, with voting implemented like a DAO. In practical terms, you vote for your favorite investigation of the week; if the piece wins, the author gets an NFT, and you get to win one. </p>
-										<a href="/#" className="special">Learn more</a>
+										<a href="/#" className="special">Read Our White Paper Here</a>
 									</div>
 								</div>
 							</section>
@@ -57,8 +59,12 @@ function Home() {
 									<a href="/#" className="image"><img src="images/pic02.jpg" alt="" /></a>
 									<div className="content">
 										<h2 className="major">Expert Curated Decisions</h2>
-										<p>Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras turpis ante, nullam sit amet turpis non, sollicitudin posuere urna. Mauris id tellus arcu. Nunc vehicula id nulla dignissim dapibus. Nullam ultrices, neque et faucibus viverra, ex nulla cursus.</p>
-										<a href="/#" className="special">Learn more</a>
+										<p> Coins in the Bellingcoin project are divided into governence tokens and regular tokens. Governence tokens are initially distributed to vetted experts among the 
+											OSINT community, including NYT visual investigator <b><Link to='//nytimes.com/by/muyi-xiao'> Muyi Xiao </Link> </b>, BBC journalist <b><Link to='//twitter.com/yaolri'> Alliume Leroy </Link></b>, and Center for Information Reslience Director 
+											<b><Link to='//twitter.com/BenDoBrown'> Benjamin Strick </Link> </b>, who have all verbally agreed to try out this project at launch. 
+											Every week, these experts in their field collective provide a curated shortlist of the best OSI projects for the community to browse and vote on.
+											 </p>
+										<a href="/#" className="special"> Join our Experts</a>
 									</div>
 								</div>
 							</section>
@@ -69,8 +75,11 @@ function Home() {
 									<a href="/www.twitter.com" className="image"><img src="images/pic03.jpg" alt="" /></a>
 									<div className="content">
 										<h2 className="major">Exclusive NFT Rewards</h2>
-										<p>Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras turpis ante, nullam sit amet turpis non, sollicitudin posuere urna. Mauris id tellus arcu. Nunc vehicula id nulla dignissim dapibus. Nullam ultrices, neque et faucibus viverra, ex nulla cursus.</p>
-										<a href="/www.twitter.com" className="special">Learn more</a>
+										<p> After the voting period ends, the results — winning author and article — are stored forever on the blockchain. 
+											The voting process also mints a new token that is linked to the week of voting and winning article,
+											and has its ownership continuously updated on the blockchain, serving as a unique NFT tied to an investigation. 
+											These Bellingcoin and NFT rewards are distributed to the author and voters according to our reward structures.  </p>
+										<a href="/awards" className="special">Learn more</a>
 									</div>
 								</div>
 							</section>
@@ -78,36 +87,36 @@ function Home() {
 						{/* <!-- Four --> */}
 							<section id="four" className="wrapper alt style1">
 								<div className="inner">
-									<h2 className="major">Vitae phasellus</h2>
-									<p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.</p>
+									<h2 className="major">Winning articles</h2>
+									<p>Our most recent past winning investigations, stored permananently on the blockchain.</p>
 									<section className="features">
 										<article>
 											<a href="/#" className="image"><img src="images/pic04.jpg" alt="" /></a>
-											<h3 className="major">Sed feugiat lorem</h3>
+											<h3 className="major">Into the Hateverse</h3>
 											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
 											<a href="/#" className="special">Learn more</a>
 										</article>
 										<article>
 											<a href="/#" className="image"><img src="images/pic05.jpg" alt="" /></a>
-											<h3 className="major">Nisl placerat</h3>
+											<h3 className="major">Into Inner Mongolia</h3>
 											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
 											<a href="/#" className="special">Learn more</a>
 										</article>
 										<article>
 											<a href="/#" className="image"><img src="images/pic06.jpg" alt="" /></a>
-											<h3 className="major">Ante fermentum</h3>
+											<h3 className="major">The Nalvany Poisoner</h3>
 											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
 											<a href="/#" className="special">Learn more</a>
 										</article>
 										<article>
 											<a href="/#" className="image"><img src="images/pic07.jpg" alt="" /></a>
-											<h3 className="major">Fusce consequat</h3>
+											<h3 className="major">Myanmar's Forever War</h3>
 											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
 											<a href="/#" className="special">Learn more</a>
 										</article>
 									</section>
 									<ul className="actions">
-										<li><a href="/#" className="button">Browse All</a></li>
+										<li><a href="/#" className="button">Vote Now</a></li>
 									</ul>
 								</div>
 							</section>
