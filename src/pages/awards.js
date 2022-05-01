@@ -10,18 +10,103 @@ function Awards() {
   const start = () => {
     console.log("button clicked");
     console.log(setStartTime());
-    
   }
 
   return (
+    
     <div className = 'awards'>
-      	<img src={logo} alt="" />
-        <h1> AWARDS!! </h1>
+
+    <section id="wrapper">
+      <header>
+      <div className="inner">
+          <h2>Voting and Rewards</h2> 
+          <p>Move the World with your Bellingcoin.</p>			
+  
+      {/* <h1> AWARDS!! </h1> */}
+      <button> Login Metamask</button> 
+      <br></br>
+      <br></br>
+
         {!started ? (
-          <button onClick={() => start()}> Start Voting </button>
+          <button onClick={() => start()}> Initiate Voting Period</button>
         ) : (
           <p> Voting process started!</p>
         )}
+
+      <hr></hr>
+      <h4>The section below will only be Accessible by holders of the Bellingcoin OSINT token: OSI in their wallet.</h4>
+
+      <h3 class="major">Articles of the Week</h3>
+          <div className="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                <th>Title</th>
+								<th>Link</th>
+								<th>Author</th>                  
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Article 1</td>
+                  <td>Link 1</td>
+                  <td>Author 1</td>
+                </tr>
+                <tr>
+                  <td>Article 2</td>
+                  <td>Link 2.</td>
+                  <td>Author 2</td>
+                </tr>
+                <tr>
+                  <td>Article 3</td>
+                  <td>Link 3</td>
+                  <td>Author 3</td>
+                </tr>
+                </tbody>
+                
+            </table>
+          </div>
+
+      <hr></hr>
+      <h4>The section below will only be usable by holders of the Bellingcoin Governence coin: OSI_Gov in their wallet.</h4>
+      
+      <form method="post" action="#">
+        <div class="row gtr-uniform">
+          <div class="col-6 col-12-xsmall">
+            <label for="demo-name">Author</label>
+            <input type="text" name="demo-name" id="demo-name" value=""></input>
+          </div>
+          <div class="col-6 col-12-xsmall">
+            <label for="demo-name">Publication</label>
+            <input type="text" name="demo-name" id="demo-name" value=""></input>
+          </div>
+          <div class="col-6 col-12-xsmall">
+            <label for="demo-name">Author Wallet Address (if known)</label>
+            <input type="text" name="demo-name" id="demo-name" value=""></input>
+          </div>
+          <div class="col-6 col-12-xsmall">
+            <label for="demo-email">Article Link</label>
+            <input type="email" name="demo-email" id="demo-email" value=""></input>
+          </div>
+          <div class="col-12">
+            <label for="demo-message">Article Heading</label>
+            <textarea name="demo-message" id="demo-message" rows="2"></textarea>
+          </div>
+          <div class="col-12">
+            <ul class="actions">
+              <li><input type="submit" value="Submit Nomination" class="primary" /></li>
+              <li><input type="reset" value="Reset"></input></li>
+            </ul>
+          </div>
+        </div>
+				</form>
+
+      </div>
+      </header>
+
+
+    </section>
+    
     </div>
   );
 }
