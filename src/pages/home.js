@@ -94,29 +94,51 @@ function Home() {
 									<p>Our most recent past winning investigations, stored permananently on the blockchain.</p>
 									<section className="features">
 										<article>
-											<a href="/#" className="image"><img src="images/pic04.jpg" alt="" /></a>
+											{/* <a href="/#" className="image"><img src={pict1} alt="" /></a> */}
 											<h3 className="major">Into the Hateverse</h3>
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-											<a className="special"> <b><Link to='//nytimes.com/by/muyi-xiao'> Read Article </Link></b></a>
+											COVID-19 conspiracy theories are spreading online like a virus. An inside look at a dangerous misinformation movement that’s spilling into the real world...
+											<br></br> <br></br>	
+											<p>Author: Edward Tian <br></br>
+											Publication: Toronto Star <br></br>
+											Proposed Date: Apr 1, 2022
+											</p>
+											<a className="special"> <b><Link to='//www.thestar.com/news/investigations/2021/07/22/how-covid-19-conspiracy-theories-are-spreading-online-like-a-virus.html'> Read Article </Link></b></a>
 										</article>
 										<article>
-											<a href="/#" className="image"><img src="images/pic05.jpg" alt="" /></a>
-											<h3 className="major">Into Inner Mongolia</h3>
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-											<b><Link to='//nytimes.com/by/muyi-xiao'> Read Article </Link></b>
+											{/* <a href="/#" className="image"><img src="images/pic06.jpg" alt="" /></a> */}
+											<h3 className="major"> The Nalvany Poisoner</h3>
+											<p> Investigation reveals new voluminous telecom and travel data that implicates Russia Federal Security Service (FSB) in the poisoning of the prominent Russian opposition politician Alexey Navalny...
+											<br></br> <br></br>
+											Author: Bellingcat Investigations Team <br></br>
+											Publication: Bellingcat <br></br>
+											Proposed Date: Apr 8, 2022
+											</p>
+											<a className="special"><b><Link to='//www.bellingcat.com/news/uk-and-europe/2020/12/14/fsb-team-of-chemical-weapon-experts-implicated-in-alexey-navalny-novichok-poisoning/'> Read Article </Link></b>
+											</a>
 										</article>
 										<article>
-											<a href="/#" className="image"><img src="images/pic06.jpg" alt="" /></a>
-											<h3 className="major">The Nalvany Poisoner</h3>
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-											<b><Link to='//nytimes.com/by/muyi-xiao'> Read Article </Link></b>
+											{/* <a href="/#" className="image"><img src={pict1} alt="" /></a> */}
+											<h3 className="major">Graves of Mariupol</h3>
+											Tens of thousands in ruined city of Mariupol in Ukraine are in dire need of assistance...
+											<br></br> <br></br>	
+											<p>Author: Christiaan Triebert <br></br>
+											Publication: New York Times <br></br>
+											Proposed Date: Apr 15, 2022
+											</p>
+											<a className="special"> <b><Link to='//www.thestar.com/news/investigations/2021/07/22/how-covid-19-conspiracy-theories-are-spreading-online-like-a-virus.html'> Read Article </Link></b></a>
 										</article>
+					
 										<article>
-											<a href="/#" className="image"><img src="images/pic07.jpg" alt="" /></a>
-											<h3 className="major">Myanmar's Forever War</h3>
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-											<a href="/#" className="special">Read Article</a>
-										</article>
+											{/* <a href="/#" className="image"><img src={pict1} alt="" /></a> */}
+											<h3 className="major">Crypto SuperPAC</h3>
+											Crypto PAC throws in $1 million to back Ohio Rep. Shontel Brown over Nina Turner...
+											<br></br> <br></br>	
+											<p>Author: Ryan Grim <br></br>
+											Publication: The Intercept <br></br>
+											Proposed Date: Apr 22, 2022
+											</p>
+											<a className="special"> <b><Link to='//www.thestar.com/news/investigations/2021/07/22/how-covid-19-conspiracy-theories-are-spreading-online-like-a-virus.html'> Read Article </Link></b></a>
+										</article>										
 									</section>
 									<ul className="actions">
 										<li><a href="/#" className="button">Vote Now</a></li>
