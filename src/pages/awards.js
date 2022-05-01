@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
 import {init, setStartTime} from '../web3client.js';
+import logo from "../images/bg.jpg";
+
 // import '../css/main.css';
 
 function Awards() {
@@ -13,6 +15,7 @@ function Awards() {
 
   return (
     <div className = 'awards'>
+      	<img src={logo} alt="" />
         <h1> AWARDS!! </h1>
         {!started ? (
           <button onClick={() => start()}> Start Voting </button>

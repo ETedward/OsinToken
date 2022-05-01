@@ -1,5 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import pict1 from "../images/picture1.jpg";
+import pict2 from "../images/picture2.jpg";
+import pict3 from "../images/picture3.png";
 
 // import '../css/main.css';
 
@@ -44,7 +47,7 @@ function Home() {
 						{/* <!-- One --> */}
 							<section id="one" className="wrapper spotlight style1">
 								<div className="inner">
-									<a href="/#" className="image"><img src="images/pic01.jpg" alt="" /></a>
+									<a className="image"><img src={pict1} alt="" /></a>
 									<div className="content">
 										<h2 className="major">What is Bellingcoin?</h2>
 										<p> We're like the Pulitzers for open source investigations — except awards are decided and voted by the community. In technical jargon, Bellingcoin is an Ethereum token written to ERC-20 standards, with voting implemented like a DAO. In practical terms, you vote for your favorite investigation of the week; if the piece wins, the author gets an NFT, and you get to win one. </p>
@@ -56,13 +59,13 @@ function Home() {
 						{/* <!-- Two --> */}
 							<section id="two" className="wrapper alt spotlight style2">
 								<div className="inner">
-									<a href="/#" className="image"><img src="images/pic02.jpg" alt="" /></a>
+									<a className="image"><img src={pict2} alt="" /></a>
 									<div className="content">
 										<h2 className="major">Expert Curated Decisions</h2>
 										<p> Coins in the Bellingcoin project are divided into governence tokens and regular tokens. Governence tokens are initially distributed to vetted experts among the 
-											OSINT community, including NYT visual investigator <b><Link to='//nytimes.com/by/muyi-xiao'> Muyi Xiao </Link> </b>, BBC journalist <b><Link to='//twitter.com/yaolri'> Alliume Leroy </Link></b>, and Center for Information Reslience Director 
-											<b><Link to='//twitter.com/BenDoBrown'> Benjamin Strick </Link> </b>, who have all verbally agreed to try out this project at launch. 
-											Every week, these experts in their field collective provide a curated shortlist of the best OSI projects for the community to browse and vote on.
+											OSINT community, including NYT visual investigator <b><Link to='//nytimes.com/by/muyi-xiao'> Muyi Xiao </Link> </b>, BBC journalist <b><Link to='//twitter.com/yaolri'> Aliaume Leroy </Link></b>, and Center for Information Reslience Director 
+											<b><Link to='//twitter.com/BenDoBrown'> Benjamin Strick </Link> </b>, who have committed to trying this project at launch. 
+											Every week, these experts in their field collectively will provide a curated shortlist of the best OSI projects for the community to browse and vote on.
 											 </p>
 										<a href="/#" className="special"> Join our Experts</a>
 									</div>
@@ -72,12 +75,12 @@ function Home() {
 						{/* <!-- Three --> */}
 							<section id="three" className="wrapper spotlight style3">
 								<div className="inner">
-									<a href="/www.twitter.com" className="image"><img src="images/pic03.jpg" alt="" /></a>
+									<a className="image"><img src={pict3} alt="" /></a>
 									<div className="content">
 										<h2 className="major">Exclusive NFT Rewards</h2>
 										<p> After the voting period ends, the results — winning author and article — are stored forever on the blockchain. 
 											The voting process also mints a new token that is linked to the week of voting and winning article,
-											and has its ownership continuously updated on the blockchain, serving as a unique NFT tied to an investigation. 
+											and has its ownership continuously updated on the blockchain, serving as a unique NFT tied to a piece of investigative journalism. 
 											These Bellingcoin and NFT rewards are distributed to the author and voters according to our reward structures.  </p>
 										<a href="/awards" className="special">Learn more</a>
 									</div>
@@ -94,25 +97,25 @@ function Home() {
 											<a href="/#" className="image"><img src="images/pic04.jpg" alt="" /></a>
 											<h3 className="major">Into the Hateverse</h3>
 											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-											<a href="/#" className="special">Learn more</a>
+											<a className="special"> <b><Link to='//nytimes.com/by/muyi-xiao'> Read Article </Link></b></a>
 										</article>
 										<article>
 											<a href="/#" className="image"><img src="images/pic05.jpg" alt="" /></a>
 											<h3 className="major">Into Inner Mongolia</h3>
 											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-											<a href="/#" className="special">Learn more</a>
+											<b><Link to='//nytimes.com/by/muyi-xiao'> Read Article </Link></b>
 										</article>
 										<article>
 											<a href="/#" className="image"><img src="images/pic06.jpg" alt="" /></a>
 											<h3 className="major">The Nalvany Poisoner</h3>
 											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-											<a href="/#" className="special">Learn more</a>
+											<b><Link to='//nytimes.com/by/muyi-xiao'> Read Article </Link></b>
 										</article>
 										<article>
 											<a href="/#" className="image"><img src="images/pic07.jpg" alt="" /></a>
 											<h3 className="major">Myanmar's Forever War</h3>
 											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-											<a href="/#" className="special">Learn more</a>
+											<a href="/#" className="special">Read Article</a>
 										</article>
 									</section>
 									<ul className="actions">
