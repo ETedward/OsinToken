@@ -4,6 +4,7 @@ import bellingContractBuild from './contracts/OSIVoting.json'
 let bellingContract;
 let selectedAccount;
 let isInitialized = false;
+let accounts;
 
 export const init = async () => {
     let provider = window.ethereum; // check if metamask is installed
@@ -31,12 +32,14 @@ export const init = async () => {
     
     // part 2 connection the contract
     const networkId = await web3.eth.net.getId();
-    const accounts = await web3.eth.getAccounts()
+    console.log(networkId);
+    accounts = await web3.eth.getAccounts()
     isInitialized = true;
     
+    console.log("contract address", bellingContractBuild.networks[networkId].address);
     bellingContract = new web3.eth.Contract(
         bellingContractBuild.abi, 
-        bellingContractBuild.networks[5777].address
+        bellingContractBuild.networks[networkId].address
     );
 };
 
@@ -45,9 +48,20 @@ export const setStartTime = async () => {
         await init();
     }
     // return bellingContract.methods.governenceSupply()
-    return bellingContract.methods
-        .winnersLength()
+    return await bellingContract.methods
+        .setStartTime(100).send({from: accounts[0]})
+        // .winnersLength()
 };
+
+export const testContract = async () => {
+    if (!isInitialized) {
+        await init();
+    }
+    // return bellingContract.methods.governenceSupply()
+    // return await bellingContract.methods.nomineesLength().call({from: accounts[0]})
+    return await bellingContract.methods.submitNomination('0xB8d9892fD68f5c50c6AE5F95b543Bc06F785cb79','www.edwardtian.com').call({from: accounts[0]})
+};
+
 
 export const castVote = async (props) => {
     if (!isInitialized) {

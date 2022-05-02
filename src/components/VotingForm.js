@@ -35,7 +35,7 @@ export const VotingForm = (props) => {
             onChange={handleChange}
           />
         </label>
-          <input type="submit" />
+          <input type="submit" value="Submit Vote"/>
       </form>
     )
 }

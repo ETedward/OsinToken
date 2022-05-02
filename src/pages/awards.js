@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {init, setStartTime} from '../web3client.js';
+import {init, setStartTime, testContract} from '../web3client.js';
 import logo from "../images/bg.jpg";
 import {VotingForm} from '../components/VotingForm'
 import {NominationForm} from '../components/NominationForm'
@@ -16,7 +16,7 @@ function Awards() {
 
   const start = () => {
     console.log("button clicked");
-    setStartTime();
+    testContract().then(console.log);
   }
 
   return (
