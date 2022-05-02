@@ -1,15 +1,22 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {init, setStartTime} from '../web3client.js';
 import logo from "../images/bg.jpg";
+import {VotingForm} from '../components/VotingForm'
+import {NominationForm} from '../components/NominationForm'
 
 // import '../css/main.css';
 
 function Awards() {
+  // useEffect(() => {
+	// 	init()
+	// }, []); 
+
   const [started] = useState(false);
+  const [voted] = useState(false);
 
   const start = () => {
     console.log("button clicked");
-    console.log(setStartTime());
+    setStartTime();
   }
 
   return (
@@ -23,7 +30,7 @@ function Awards() {
           <p>Move the World with your Bellingcoin.</p>			
   
       {/* <h1> AWARDS!! </h1> */}
-      <button> Login Metamask</button> 
+      <button onClick = {() => init()}> Login Metamask</button> 
       <br></br>
       <br></br>
 
@@ -32,6 +39,9 @@ function Awards() {
         ) : (
           <p> Voting process started!</p>
         )}
+
+      <br></br> <br></br>
+
 
       <hr></hr>
       <h4>The section below will only be Accessible by holders of the Bellingcoin OSINT token: OSI in their wallet.</h4>
@@ -67,10 +77,13 @@ function Awards() {
             </table>
           </div>
 
+      <VotingForm></VotingForm>
+
       <hr></hr>
       <h4>The section below will only be usable by holders of the Bellingcoin Governence coin: OSI_Gov in their wallet.</h4>
       
-      <form method="post" action="#">
+      <NominationForm></NominationForm>
+      {/* <form method="post" action="#">
         <div class="row gtr-uniform">
           <div class="col-6 col-12-xsmall">
             <label for="demo-name">Author</label>
@@ -99,11 +112,10 @@ function Awards() {
             </ul>
           </div>
         </div>
-				</form>
+				</form> */}
 
       </div>
       </header>
-
 
     </section>
     

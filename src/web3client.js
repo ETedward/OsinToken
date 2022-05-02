@@ -49,3 +49,11 @@ export const setStartTime = async () => {
     return bellingContract.methods
         .winnersLength()
 };
+
+export const castVote = async (props) => {
+    if (!isInitialized) {
+        await init();
+    }
+    return bellingContract.methods
+        .castVotes(props,1)
+};
