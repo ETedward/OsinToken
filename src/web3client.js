@@ -1,5 +1,5 @@
 import Web3 from 'web3';
-import bellingContractBuild from './contracts/OSIVoting.json'
+import bellingContractBuild from 'contracts/OSIVoting.json'
 
 let bellingContract;
 let selectedAccount;
@@ -49,7 +49,7 @@ export const setStartTime = async () => {
     }
     // return bellingContract.methods.governenceSupply()
     return await bellingContract.methods
-        .setStartTime(100).send({from: accounts[0]})
+        .setStartTime(100).call({from: accounts[0]})
         // .winnersLength()
 };
 

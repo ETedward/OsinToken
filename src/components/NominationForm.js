@@ -3,7 +3,6 @@ import React, { useState } from "react";
 export function NominationForm(props) {
   return (
     <div>
-      <h1>Nomination</h1>
     <form method="post" action="#">
         <div class="row gtr-uniform">
           <div class="col-6 col-12-xsmall">
