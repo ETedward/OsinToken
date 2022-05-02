@@ -1,6 +1,5 @@
 import Web3 from 'web3';
-// import tokenBuild from '../build/contract/Token.json'
-import bellingContractBuild from 'contracts/OSIVoting.json'
+import bellingContractBuild from './contracts/OSIVoting.json'
 
 let bellingContract;
 let selectedAccount;
