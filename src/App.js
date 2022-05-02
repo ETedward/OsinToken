@@ -9,7 +9,7 @@ import People from './pages/people'
 import Home from './pages/home'
 
 // hooks
-import { useEffect} from 'react';
+import {useEffect} from 'react';
 import Web3 from 'web3';
 import {init} from './web3client';
 
