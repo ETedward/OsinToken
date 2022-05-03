@@ -59,7 +59,7 @@ function Awards() {
     console.log("hex type", typeof hex_address, hex_address);
 
     subVote(0).then(console.log);
-    console.log(books.ind);
+    // subVote(books.length).then(console.log);
   }
 
   return (
@@ -78,7 +78,7 @@ function Awards() {
       <br></br>
 
         {!started ? (
-          <button onClick={() => start()}> Start Voting Period</button>
+          <button onClick={() => start()}> Get Length</button>
         ) : (
           <p> Voting process started!</p>
         )}
