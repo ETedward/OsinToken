@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import {init, castVote} from '../web3client.js';
 import {Icon} from 'react-icons-kit'
-import {trash} from 'react-icons-kit/feather/trash'
+import * as AiIcons from "react-icons/ai"
 
 export const ArticleList = ({books,deleteBook}) => {
     
@@ -13,7 +13,8 @@ export const ArticleList = ({books,deleteBook}) => {
             <td>{book.title}</td>
             <td>{book.author}</td>
             <td className='delete-btn' onClick={()=>deleteBook(book.address)}>
-                <Icon icon={trash}/>
+            <AiIcons.AiFillDownCircle/>   
+                {/* <Icon icon={trash}/> */}
             </td>           
         </tr>       
 ))

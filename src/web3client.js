@@ -59,9 +59,24 @@ export const testContract = async () => {
     }
     // return bellingContract.methods.governenceSupply()
     // return await bellingContract.methods.nomineesLength().call({from: accounts[0]})
-    return await bellingContract.methods.submitNomination('0xB8d9892fD68f5c50c6AE5F95b543Bc06F785cb79','www.edwardtian.com').call({from: accounts[0]})
+    return await bellingContract.methods.submitNomination('0xB8d9892fD68f5c50c6AE5F95b543Bc06F785cb79','www.edwardtian.com').send({from: accounts[0]})
 };
 
+export const testNlength = async () => {
+    if (!isInitialized) {
+        await init();
+    }
+    // return bellingContract.methods.governenceSupply()
+    // return await bellingContract.methods.nomineesLength().call({from: accounts[0]})
+    return await bellingContract.methods.nomineesLength().call({from: accounts[0]})
+};
+
+export const subNomination = async (addr,website) => {
+    if (!isInitialized) {
+        await init();
+    }
+    return await bellingContract.methods.submitNomination(addr,website).send({from: accounts[0]})
+};
 
 export const castVote = async (props) => {
     if (!isInitialized) {

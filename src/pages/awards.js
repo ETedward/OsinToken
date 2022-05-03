@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {init, setStartTime, testContract} from '../web3client.js';
+import {init, setStartTime, testContract, subNomination, testNlength} from '../web3client.js';
 import logo from "../images/bg.jpg";
 import {VotingForm} from '../components/VotingForm'
 import {NominationForm} from '../components/NominationForm'
@@ -31,13 +31,23 @@ function Awards() {
   const start = () => {
     console.log("button clicked");
     testContract().then(console.log);
+    testNlength().then(console.log);
   }
 
-  const deleteBook=(isbn)=>{
+  const deleteBook=(address)=>{
     const filteredBooks=books.filter((element,index)=>{
-      return element.isbn !== isbn
+      return element.address !== address
     })
     setbooks(filteredBooks);
+  }
+
+  var text = "hello world";
+
+  const voteArticle=(address)=>{
+    alert('You have voted. \nYou vote was cast to the associated wallet address: ' + address + 
+    '\nYou have 0 remaining votes this week')
+    
+    subNomination(address,'www.edwardtian.com').then(console.log);
   }
 
   return (
@@ -66,7 +76,7 @@ function Awards() {
       <hr></hr>
       <h4>The section below will only be Accessible by holders of the Bellingcoin OSINT token: OSI in their wallet.</h4>
 
-      <h3 class="major">Articles of the Week</h3>
+      <h3 clasNames="major">Articles of the Week</h3>
 
       <div className='view-container'>
           {books.length>0&&<>
@@ -77,18 +87,19 @@ function Awards() {
                     <th>Wallet Address</th>
                     <th>Title</th>
                     <th>Author</th>
-                    <th>" "</th>
+                    <th>Vote</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <ArticleList books={books} deleteBook={deleteBook}/>
+                  <ArticleList books={books} deleteBook={voteArticle}/>
                 </tbody>
               </table>
             </div>
             {/* <button className='btn btn-danger btn-md'
             onClick={()=>setbooks([])}>Remove All</button> */}
           </>}
-          {books.length < 1 && <div>No articles have been nominated in the current voting period</div>}
+          {books.length < 1 && <div><i>No articles have been nominated in the current voting period.</i></div>}
+          <br></br>
         </div>
 
       <VotingForm></VotingForm>
@@ -98,6 +109,7 @@ function Awards() {
       <h1>Nomination</h1>
       <GovernorPortal></GovernorPortal>
       <NominationForm></NominationForm>
+
       {/* <form method="post" action="#">
         <div class="row gtr-uniform">
           <div class="col-6 col-12-xsmall">
