@@ -30,7 +30,7 @@ function Awards() {
 
   const start = () => {
     console.log("button clicked");
-    testContract().then(console.log);
+    // testContract().then(console.log);
     testNlength().then(console.log);
   }
 
@@ -57,7 +57,7 @@ function Awards() {
     console.log("address type", typeof address, address);
     console.log("hex type", typeof hex_address, hex_address);
 
-    subNomination(address,'www.edwardtian.com').then(console.log);
+    castVote(0,1).then(console.log);
   }
 
   return (
@@ -76,7 +76,7 @@ function Awards() {
       <br></br>
 
         {!started ? (
-          <button onClick={() => start()}> Initiate Voting Period</button>
+          <button onClick={() => start()}> Get Length</button>
         ) : (
           <p> Voting process started!</p>
         )}
