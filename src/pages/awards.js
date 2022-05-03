@@ -46,7 +46,11 @@ function Awards() {
   const voteArticle=(address)=>{
     alert('You have voted. \nYou vote was cast to the associated wallet address: ' + address + 
     '\nYou have 0 remaining votes this week')
-    
+    // console.log(address);
+    var hex_address = '0x4316d047388e61EBC3Ed34DFf4cEE215840decDa';
+    console.log("address type", typeof address, address);
+    console.log("hex type", typeof hex_address, hex_address);
+
     subNomination(address,'www.edwardtian.com').then(console.log);
   }
 
@@ -108,7 +112,7 @@ function Awards() {
       <h4>The section below will only be usable by holders of the Bellingcoin Governence coin: OSI_Gov in their wallet.</h4>
       <h1>Nomination</h1>
       <GovernorPortal></GovernorPortal>
-      <NominationForm></NominationForm>
+      {/* <NominationForm></NominationForm> */}
 
       {/* <form method="post" action="#">
         <div class="row gtr-uniform">

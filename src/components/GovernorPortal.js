@@ -1,5 +1,6 @@
 import React,{useState, useEffect} from 'react'
 import {ArticleList} from '../components/ArticleList'
+import {init, subNomination} from '../web3client.js';
 
 // getting the values of local storage
 const getDatafromLS=()=>{
@@ -10,6 +11,16 @@ const getDatafromLS=()=>{
   else{
     return []
   }
+}
+
+const nominateArticle=(address,title)=>{
+  alert('You have submited nomination. \nYou nomination was cast to the associated wallet address: ' + address + 
+  '\nYou have 0 remaining nominations this week')
+  // console.log(address);
+  console.log("address type", typeof address, address);
+  console.log("article", typeof title, title);
+
+  subNomination(address,title).then(console.log);
 }
 
 export const GovernorPortal = () => {
@@ -35,6 +46,8 @@ export const GovernorPortal = () => {
     setTitle('');
     setAuthor('');
     setAddress('');
+
+    nominateArticle(address,title);
   }
 
   // delete book from LS
@@ -50,6 +63,7 @@ export const GovernorPortal = () => {
     localStorage.setItem('books',JSON.stringify(books));
   },[books])
 
+  
   return (
     <div className='wrapper'>
       <div className='main'>
