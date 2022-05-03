@@ -78,7 +78,7 @@ function Awards() {
       <br></br>
 
         {!started ? (
-          <button onClick={() => start()}> Get Length</button>
+          <button onClick={() => start()}> Start Voting Period</button>
         ) : (
           <p> Voting process started!</p>
         )}

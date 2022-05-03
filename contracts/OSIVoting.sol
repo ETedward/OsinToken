@@ -117,6 +117,10 @@ contract OSIVoting is Ownable {
         return goverance_votes * goverance.balanceOf(_voter) + rewards.balanceOf(_voter) - votesCast[_voter];
     }
 
+    function canNominate() public view returns (bool) {
+        return nominationsMade[msg.sender] < goverance.balanceOf(msg.sender) && block.timestamp > startTime && block.timestamp <= startTime + seconds_for_nominations;
+    }
+
     function submitNomination(address _writer, string calldata _url) public returns (bool) {
         require(nominationsMade[msg.sender] < goverance.balanceOf(msg.sender), "too many nominations");
         require(block.timestamp > startTime, "too early");
@@ -130,6 +134,10 @@ contract OSIVoting is Ownable {
 
         emit Nominate(msg.sender, _writer, _url);
         return true;
+    }
+
+    function canVote() public view returns (bool) {
+        return votesRemaining(msg.sender) > 0 && block.timestamp > startTime + seconds_for_nominations && block.timestamp <= startTime + seconds_for_nominations + seconds_for_voting;
     }
 
     function castVotes(uint _index, uint256 _amount) public returns (bool) {
