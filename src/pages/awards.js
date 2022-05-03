@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {init, setStartTime, subVote, testContract, subNomination, testNlength, endVoting, castVote} from '../web3client.js';
+import {init, setStartTime, subVote, testContract, subNomination, testNlength, endVoting} from '../web3client.js';
 import logo from "../images/bg.jpg";
 import {VotingForm} from '../components/VotingForm'
 import {NominationForm} from '../components/NominationForm'
@@ -37,8 +37,9 @@ function Awards() {
   const end = () => {
     console.log("the end is in sight");
     testContract().then(console.log);
-
+    
   }
+
 
   const deleteBook=(address)=>{
     const filteredBooks=books.filter((element,index)=>{
@@ -57,7 +58,8 @@ function Awards() {
     console.log("address type", typeof address, address);
     console.log("hex type", typeof hex_address, hex_address);
 
-    castVote(0,1).then(console.log);
+    subVote(0).then(console.log);
+    console.log(books.ind);
   }
 
   return (

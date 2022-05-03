@@ -71,8 +71,6 @@ export const testNlength = async () => {
     return await bellingContract.methods.nomineesLength().call({from: accounts[0]})
 };
 
-
-
 export const subNomination = async (addr,website) => {
     if (!isInitialized) {
         await init();
@@ -88,10 +86,10 @@ export const endVoting = async (addr,website) => {
 };
 
 
-export const castVote = async (ind) => {
+export const subVote = async (ind) => {
     if (!isInitialized) {
         await init();
     }
     return bellingContract.methods
-        .castVotes(ind,1)
+        .castVotes(ind,10).send({from: accounts[0]})
 };

@@ -1,6 +1,6 @@
 
 import React, { useState } from "react";
-import {init, castVote} from '../web3client.js';
+import {init, subVote} from '../web3client.js';
 
 export const VotingForm = (props) => {
   const [inputs, setInputs] = useState({});
@@ -15,7 +15,7 @@ export const VotingForm = (props) => {
       event.preventDefault();
       console.log(inputs);
       console.log(inputs.website);
-      castVote(0,1);
+      subVote(0);
     }
   return (
       <form onSubmit={handleSubmit}>

@@ -1,6 +1,6 @@
 import React,{useState, useEffect} from 'react'
 import {ArticleList} from '../components/ArticleList'
-import {init, subNomination} from '../web3client.js';
+import {init, subNomination, testNlength} from '../web3client.js';
 
 // getting the values of local storage
 const getDatafromLS=()=>{
@@ -32,15 +32,17 @@ export const GovernorPortal = () => {
   const [title, setTitle]=useState('');
   const [author, setAuthor]=useState('');
   const [address, setAddress]=useState('');
+  const [ind, setInd]=useState('');
 
   // form submit event
-  const handleAddBookSubmit=(e)=>{
+  const handleAddBookSubmit= async (e)=>{
     e.preventDefault();
     // creating an object
     let book={
       title,
       author,
-      address
+      address,
+      ind,
     }
     setbooks([...books,book]);
     setTitle('');
@@ -48,6 +50,10 @@ export const GovernorPortal = () => {
     setAddress('');
 
     nominateArticle(address,title);
+    let w3_ind = await testNlength();
+    console.log("web3 index is ", w3_ind);
+    setInd(w3_ind); // indicy of the article in the blockchain
+
   }
 
   // delete book from LS
@@ -83,7 +89,7 @@ export const GovernorPortal = () => {
             <input type="text" className='form-control' required
             onChange={(e)=>setAddress(e.target.value)} value={address}></input>
             <br></br>
-            <button type="submit" className='btn btn-success btn-md'>
+            <button onClick type="submit" className='btn btn-success btn-md'>
               Submit Nomination
             </button>
           </form>
