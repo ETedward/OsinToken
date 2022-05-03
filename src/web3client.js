@@ -78,10 +78,18 @@ export const subNomination = async (addr,website) => {
     return await bellingContract.methods.submitNomination(addr,website).send({from: accounts[0]})
 };
 
-export const castVote = async (props) => {
+export const endVoting = async (addr,website) => {
+    if (!isInitialized) {
+        await init();
+    }
+    return await bellingContract.methods.updateWinner().send({from: accounts[0]})
+};
+
+
+export const castVote = async (ind) => {
     if (!isInitialized) {
         await init();
     }
     return bellingContract.methods
-        .castVotes(props,1)
+        .castVotes(ind,1)
 };

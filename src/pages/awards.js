@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {init, setStartTime, testContract, subNomination, testNlength} from '../web3client.js';
+import {init, setStartTime, subVote, testContract, subNomination, testNlength, endVoting, castVote} from '../web3client.js';
 import logo from "../images/bg.jpg";
 import {VotingForm} from '../components/VotingForm'
 import {NominationForm} from '../components/NominationForm'
@@ -32,6 +32,12 @@ function Awards() {
     console.log("button clicked");
     testContract().then(console.log);
     testNlength().then(console.log);
+  }
+
+  const end = () => {
+    console.log("the end is in sight");
+    testContract().then(console.log);
+
   }
 
   const deleteBook=(address)=>{
@@ -75,7 +81,15 @@ function Awards() {
           <p> Voting process started!</p>
         )}
 
-      <br></br> <br></br>
+      <br></br>
+      <br></br>
+
+      {!started ? (
+          <button onClick={() => end()}> End Voting Period</button>
+        ) : (
+          <p> Voting process ended!</p>
+        )}
+      <br></br> 
 
       <hr></hr>
       <h4>The section below will only be Accessible by holders of the Bellingcoin OSINT token: OSI in their wallet.</h4>
