@@ -7,7 +7,7 @@ import * as AiIcons from "react-icons/ai"
 export const ArticleList = ({books,deleteBook}) => {
     
     return books.map(book=>(
-
+        
         <tr key={book.address}>
             <td>{book.address}</td>
             <td>{book.title}</td>

@@ -18245,14 +18245,103 @@
   },
   "networks": {
     "5777": {
-      "events": {},
+      "events": {
+        "0x86b9bd97bdb1aa709e139f61f71cef4092d6d19d5f94dc1ecdc98402bdc09a25": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "_nominator",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "_writer",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "string",
+              "name": "_url",
+              "type": "string"
+            }
+          ],
+          "name": "Nominate",
+          "type": "event"
+        },
+        "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "previousOwner",
+              "type": "address"
+            },
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "newOwner",
+              "type": "address"
+            }
+          ],
+          "name": "OwnershipTransferred",
+          "type": "event"
+        },
+        "0xf872c9dd43e62509c7276e545b258673a25292dbeb9756e834227c8a83818655": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "_voter",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "string",
+              "name": "_url",
+              "type": "string"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "_amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "Vote",
+          "type": "event"
+        },
+        "0x45edd59c4f5dea5f690cd524f1a6ea9cba17b09235c1bfaa2cea0d80bac5daba": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": true,
+              "internalType": "address",
+              "name": "_writer",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "string",
+              "name": "_url",
+              "type": "string"
+            }
+          ],
+          "name": "Winner",
+          "type": "event"
+        }
+      },
       "links": {},
-      "address": "0xd3652C854Be733ABE80618C9D9F180E5a7B17dD3",
-      "transactionHash": "0x63d589ae3ada4ce91acc1e2f93db0d6c096d0b049824ed654cfde3c580fa8279"
+      "address": "0xE5E6d0dDeE24683B2B56B49A749E7DE7c1EFf72E",
+      "transactionHash": "0x01d88c0e09028235d0649b6fff7bf5c64faff916081cb31e131554f5c7f827c9"
     }
   },
   "schemaVersion": "3.4.7",
-  "updatedAt": "2022-05-03T22:40:42.941Z",
+  "updatedAt": "2022-05-04T01:53:30.355Z",
   "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",

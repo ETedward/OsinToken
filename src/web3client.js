@@ -1,5 +1,5 @@
 import Web3 from 'web3';
-import bellingContractBuild from './contracts/OSIVoting.json'
+import bellingContractBuild from 'contracts/OSIVoting.json'
 
 let bellingContract;
 let selectedAccount;
@@ -43,14 +43,15 @@ export const init = async () => {
     );
 };
 
-export const setStartTime = async () => {
+export const setStartTime = async (time) => {
     if (!isInitialized) {
         await init();
     }
     // return bellingContract.methods.governenceSupply()
     return await bellingContract.methods
-        .setStartTime(100).call({from: accounts[0]})
-        // .winnersLength()
+        .setStartTime(time).send({from: accounts[0]})
+        // 1651607538 refers to May 3
+        // 1651609278 refers to May 5
 };
 
 export const testContract = async () => {
@@ -78,11 +79,13 @@ export const subNomination = async (addr,website) => {
     return await bellingContract.methods.submitNomination(addr,website).send({from: accounts[0]})
 };
 
-export const endVoting = async (addr,website) => {
+export const endVoting = async () => {
     if (!isInitialized) {
         await init();
     }
-    return await bellingContract.methods.updateWinner().send({from: accounts[0]})
+    return await bellingContract.methods
+    .updateWinner()
+    .send({from: accounts[0]})
 };
 
 

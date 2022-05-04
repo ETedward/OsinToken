@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import pict1 from "../images/picture1.jpg";
 import pict2 from "../images/picture2.jpg";
 import pict3 from "../images/picture3.png";
+import {getWinner} from '../web3client.js';
+
 
 // import '../css/main.css';
 
@@ -131,11 +133,11 @@ function Home() {
 										<article>
 											{/* <a href="/#" className="image"><img src={pict1} alt="" /></a> */}
 											<h3 className="major">Crypto SuperPAC</h3>
-											Crypto PAC throws in $1 million to back Ohio Rep. Shontel Brown over Nina Turner...
+											Crypto PAC throws in $1 million to back Ohio Rep.
 											<br></br> <br></br>	
 											<p>Author: Ryan Grim <br></br>
 											Publication: The Intercept <br></br>
-											Proposed Date: Apr 22, 2022
+											Proposed Date: May 3, 2022
 											</p>
 											<a className="special"> <b><Link to='//www.thestar.com/news/investigations/2021/07/22/how-covid-19-conspiracy-theories-are-spreading-online-like-a-virus.html'> Read Article </Link></b></a>
 										</article>										

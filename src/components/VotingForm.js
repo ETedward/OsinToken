@@ -1,6 +1,7 @@
 
 import React, { useState } from "react";
 import {init, subVote} from '../web3client.js';
+import * as AiIcons from "react-icons/ai"
 
 export const VotingForm = (props) => {
   const [inputs, setInputs] = useState({});
@@ -18,8 +19,9 @@ export const VotingForm = (props) => {
       subVote(0);
     }
   return (
+    <div>
       <form onSubmit={handleSubmit}>
-        <label>Enter your name:
+        <label>Article Title:
         <input 
           type="text" 
           name="username" 
@@ -27,7 +29,7 @@ export const VotingForm = (props) => {
           onChange={handleChange}
         />
         </label>
-        <label>Enter a website link:
+        <label>Associated wallet address:
           <input 
             type="text" 
             name="website" 
@@ -37,6 +39,7 @@ export const VotingForm = (props) => {
         </label>
           <input type="submit" value="Submit Vote"/>
       </form>
+    </div>
     )
 }
 

@@ -5,6 +5,8 @@ import {VotingForm} from '../components/VotingForm'
 import {NominationForm} from '../components/NominationForm'
 import {ArticleList} from '../components/ArticleList'
 import {GovernorPortal} from '../components/GovernorPortal'
+import * as AiIcons from "react-icons/ai"
+
 
 // getting the values of local storage
 const getDatafromLS=()=>{
@@ -31,15 +33,14 @@ function Awards() {
   const start = () => {
     console.log("button clicked");
     // testContract().then(console.log);
-    testNlength().then(console.log);
+    setStartTime(1651434738).then(console.log);
   }
 
   const end = () => {
     console.log("the end is in sight");
-    testContract().then(console.log);
-    
+    // setStartTime(1651002738).then(console.log);
+    endVoting();
   }
-
 
   const deleteBook=(address)=>{
     const filteredBooks=books.filter((element,index)=>{
@@ -58,7 +59,7 @@ function Awards() {
     console.log("address type", typeof address, address);
     console.log("hex type", typeof hex_address, hex_address);
 
-    subVote(0).then(console.log);
+    subVote(2).then(console.log);
     // subVote(books.length).then(console.log);
   }
 
@@ -78,7 +79,7 @@ function Awards() {
       <br></br>
 
         {!started ? (
-          <button onClick={() => start()}> Get Length</button>
+          <button onClick={() => start()}> Initiate Voting Period</button>
         ) : (
           <p> Voting process started!</p>
         )}
@@ -95,9 +96,8 @@ function Awards() {
 
       <hr></hr>
       <h4>The section below will only be Accessible by holders of the Bellingcoin OSINT token: OSI in their wallet.</h4>
-
+      <p>Click <AiIcons.AiFillDownCircle/> to vote </p>
       <h3 clasNames="major">Articles of the Week</h3>
-
       <div className='view-container'>
           {books.length>0&&<>
             <div className='table-responsive'>
@@ -121,9 +121,8 @@ function Awards() {
           {books.length < 1 && <div><i>No articles have been nominated in the current voting period.</i></div>}
           <br></br>
         </div>
-
+      <p> or input wallet address in form below:</p>
       <VotingForm></VotingForm>
-
       <hr></hr>
       <h4>The section below will only be usable by holders of the Bellingcoin Governence coin: OSI_Gov in their wallet.</h4>
       <h1>Nomination</h1>
